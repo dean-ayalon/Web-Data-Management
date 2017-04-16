@@ -7,7 +7,7 @@ import codecs
 def question5b(url):
     r = requests.get(url)
     doc = lxml.html.fromstring(r.content)
-    outfile = codecs.open("output.txt", 'w', encoding='utf8')
+    outfile = codecs.open("question5c.txt", 'w', encoding='utf8')
 
     outfile.write("Working on " + str(url) + "\n\n")
 
@@ -51,10 +51,6 @@ def question5b(url):
 
     outfile.close()
 
-
-#question5b("https://en.wikipedia.org/wiki/Israel")
-
 question5b("http://www.euronews.com/2015/03/20/uber-taxis-overtake-new-york-yellow-cabs/")
-#question5b("https://www.w3schools.com/html/html_tables.asp")
 
 
